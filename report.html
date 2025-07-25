@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>維修回訪報告</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>MAQUA 澳門淨能量科技公司</h1>
+  </div>
+  <div class="container">
+    <div class="text-section">
+      <p>您好啊～~我是Pure Energy淨水服務的客服！</p>
+      <p>這是早前為您服務的照片！</p>
+      <p>感謝您繼續選擇我地為您服務！</p>
+      <p>如果您係使用過程中遇到任何問題、或者需要我地幫助，隨時聯繫我地，我地隨時為您服務！</p>
+      <p>最後為左服務更周到，以下係份簡單小問卷 <a href="http://forms.gle/1mtZCkrerNMY8iZA8" target="_blank" class="link">http://forms.gle/1mtZCkrerNMY8iZA8</a></p>
+    </div>
+    <div class="report-images" id="reportImages"></div>
+    <div class="fixed-section">
+      <h2>維修紀錄影片及照片</h2>
+      <img src="assets/251753414487_.pic_hd.jpg" alt="淨水服務海報" />
+      <video controls src="assets/19_1753414480.mp4"></video>
+      <video controls src="assets/23_1753414482.mp4"></video>
+      <video controls src="assets/24_1753414485.mp4"></video>
+    </div>
+    <div class="footer">
+      感謝您選擇我們公司為您服務,希望您喜歡我們送給您的禮物,如有任何問題可隨時聯繫我們!!
+    </div>
+  </div>
+<script>
+function getParam(name){ const p=new URLSearchParams(window.location.search); return p.get(name); }
+const idsParam=getParam('ids');
+const container=document.getElementById('reportImages');
+if(idsParam){
+  try{
+    const ids=decodeURIComponent(idsParam).split(',').filter(Boolean);
+    ids.forEach(id=>{
+      const img=document.createElement('img');
+      img.src=`https://res.cloudinary.com/djw2gafqe/image/upload/${id}.jpg`;
+      container.appendChild(img);
+    });
+  }catch(e){ console.error(e); container.innerHTML='<p>解析照片資料錯誤。</p>'; }
+}else{ container.innerHTML='<p>沒有上傳的照片。</p>'; }
+</script>
+</body>
+</html>
