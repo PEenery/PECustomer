@@ -1,0 +1,96 @@
+/* 基本樣式 */
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #d2f1f9; /* 品牌淺藍背景 */
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #008c9e; /* 品牌藍綠色 */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.upload-section {
+  text-align: center;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.preview img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button {
+  background-color: #008c9e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #007280;
+}
+
+.text-section {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.text-section .link {
+  color: #005f80;
+}
+
+.report-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.report-images img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.fixed-section {
+  margin-bottom: 20px;
+}
+.fixed-section img, .fixed-section video {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 4px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+}
